@@ -22,7 +22,7 @@ ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 RUN apt-get install -y python-setuptools
 
 RUN apt-get install -y python-pip python3-pip virtualenv htop
-RUN pip3 install --upgrade numpy scipy sklearn tf-nightly
+RUN pip3 install --upgrade numpy scipy sklearn tf-nightly mlperf_compliance
 #RUN pip3 install --upgrade numpy scipy sklearn tf-nightly-gpu
 
 
