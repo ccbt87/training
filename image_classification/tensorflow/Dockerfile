@@ -1,4 +1,5 @@
-FROM nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
+FROM ubuntu:latest
+#FROM nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
 
 
 WORKDIR /research
@@ -21,7 +22,8 @@ ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 RUN apt-get install -y python-setuptools
 
 RUN apt-get install -y python-pip python3-pip virtualenv htop
-RUN pip3 install --upgrade numpy scipy sklearn tf-nightly-gpu
+RUN pip3 install --upgrade numpy scipy sklearn tf-nightly
+#RUN pip3 install --upgrade numpy scipy sklearn tf-nightly-gpu
 
 
 # Mount data into the docker
