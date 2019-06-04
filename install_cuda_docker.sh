@@ -10,11 +10,10 @@ sudo apt install cuda -y
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
-sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update
-sudo apt install docker-ce -y
+# sudo apt install docker-ce -y
+sudo apt install docker-ce=18.03.0~ce-0~ubuntu -y --allow-downgrades
 
 # Install nvidia-docker2
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
